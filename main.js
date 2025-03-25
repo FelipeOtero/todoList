@@ -10,7 +10,11 @@ function agregarTarea() {
     {
         let listatareas = document.getElementById("listatareas");
         vectorTareas.push(inputText);
-        listatareas.innerHTML = listatareas.innerHTML += "<li>" + inputText + "</li>";
+        
+        listatareas.innerHTML = "";
+
+
+        listatareas.innerHTML = vectorTareas.map(tarea => `<li>${tarea}</li>`).join(""); 
     }
 
 }
