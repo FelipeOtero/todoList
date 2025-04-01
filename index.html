@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h3>Escribí lo que tenés que hacer acá</h3>
-    <input type="text" id="escribirTarea">
-    <button onclick="agregarTarea()">Agregar Tarea</button>
-    <button onclick="mostrarMasRapida()">Mostrar tarea más rápida</button>
+    <div class="container">
+        <h2>Lista de Tareas ✅</h2>
+        
+        <div class="input-container">
+            <input type="text" id="escribirTarea" placeholder="Escribí una tarea...">
+            <button onclick="agregarTarea()">➕ Agregar</button>
+        </div>
 
-    <div id="listatareas"></div>
-    <p id="tareaRapida"></p>
+        <button class="btn-secundario" onclick="mostrarMasRapida()">⏳ Tarea más rápida</button>
+
+        <div id="listatareas" class="tareas-container"></div>
+
+        <p id="tareaRapida" class="tarea-rapida"></p>
+    </div>
 
     <script src="main.js"></script>
 </body>
